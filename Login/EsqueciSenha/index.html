@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Esqueceu Sua Senha</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 form">
+                <form action="esqueceusenha.php" method="POST" autocomplete="">
+
+                    <img src="../images/aLogo Stac.png" id="icon" alt="logo" />
+
+
+                    <h2 class="text-center">Esqueceu a Senha?</h2>
+                    <p class="text-center">Informe seu CPF e RA</p>
+                    
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="cpf" placeholder="Informe seu CPF" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="ra" placeholder="Informe seu RA" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control button" type="submit" name="check-cpf-ra" value="Continuar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

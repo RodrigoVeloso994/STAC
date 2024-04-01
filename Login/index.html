@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="shortcut icon" href="images/stac1.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="./Script.js"></script>
+
+</head>
+
+<body>
+
+    <div id="minhaDiv" class="minhaClasse">
+        <video id="bg-video" autoplay muted loop>
+            <source src="images/topoihope - Trim.mp4" type="video/mp4">
+            <img src="caminho_da_imagem.jpg" alt="Plano de fundo estático">
+        </video>
+
+    </div>
+
+    <div id="login-container">
+
+
+
+
+
+        <div class="login-box">
+            <center>
+            <img src="images/Logo Stac.jpg" id="icon" alt="logo" />
+
+            
+            
+            </center>
+                <p style="font-size: 20px;"><b>Login</b></p>
+            
+
+
+            <form method="post" action="conexao.php">
+                <div class="user-box">
+                    <input required="" name="cpf" type="text" id="CPF" oninput="mascara(this)">
+                    <label>CPF</label>
+                </div>
+                <div class="user-box">
+                    <input required="" name="senha" type="password" id="senha">
+                    <label>Senha</label>
+                </div>
+
+                <center>
+
+                <a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                        Entrar
+
+                    <input class="" style="opacity: 0; position: absolute;" type="submit" value="Enter">
+                </a>
+            </center>
+            </form>
+            <p><a href="./EsqueciSenha/index.html" class="a2">Esqueceu a senha?</a></p>
+
+            <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" class="toggleButton" onclick="alternarClasse()">
+                <span class="slider"></span>
+              </label>
+            </div>
+        </div>
+        
+
+
+    </div>
+
+    </div>
+
+    <script>
+
+function alternarClasse() {
+        var minhaDiv = document.getElementById('minhaDiv');
+        
+        // Alternar entre adicionar e remover a classe
+        minhaDiv.classList.toggle('classeDesativada');
+
+        // Alternar a classe do botão para indicar o estado
+        var toggleButton = document.querySelector('.toggleButton');
+        toggleButton.classList.toggle('active', minhaDiv.classList.contains('classeDesativada'));
+
+        // Salvar preferências do usuário (usando cookies neste exemplo)
+        document.cookie = "classeDesativada=" + minhaDiv.classList.contains('classeDesativada') + "; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+    }
+        function mascara(i){
+   
+   var v = i.value;
+   
+   if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+      i.value = v.substring(0, v.length-1);
+      return;
+   }
+   
+   i.setAttribute("maxlength", "14");
+   if (v.length == 3 || v.length == 7) i.value += ".";
+   if (v.length == 11) i.value += "-";
+
+}
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Dashboard Sidebar Menu</title>-->
+</head>
+
+<body class="dark">
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget();
+      </script>
+
+    <!-- 
+    <label for="theme" class="theme">
+        <span class="theme__toggle-wrap">
+            <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="change-theme" value="dark">
+            <span class="theme__fill"></span>
+            <span class="theme__icon">
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+            </span>
+        </span>
+    </label> -->
+
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="./images/soLogo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">STAC</span>
+                    <span class="profession">Sistema Academico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="../Home/index.html"title="Home">
+                            <i class='bx bxs-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../Notas/index.php"title="Notas">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Notas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../Faltas/index.php"title="Faltas">
+                            <i class='bx bx-calendar-check icon'></i>
+                            <span class="text nav-text">Faltas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../Historico/index.php"title="Histórico">
+                            <i class='bx bxs-graduation icon'></i>
+                            <span class="text nav-text">Histórico</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../Calendario/index.html"title="Calendário">
+                            <i class='bx bxs-calendar icon'></i>
+                            <span class="text nav-text">Calendário</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../Horario/index.html" style="
+                        background-color: var(--primary-color);"title="Horário">
+                            <i class='bx bxs-time-five icon'></i>
+                            <span class="text nav-text">Horário</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="user-section">
+                        <a href="#" class="user-link"title="Usuário">
+                            <i class='bx bxs-user icon'></i>
+                            <span class="text nav-text">Usuário</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <li class="search-box" s>
+            </li>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="../../Login/index.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+
+
+        <div class="user-popup">
+            <div class="user-info">
+                <img src="./images/leo.jpg" alt="Foto do Aluno">
+                <p class="aluno-nome">Leonardo Capra Mucci</p>
+                <p class="aluno-ra">RA: 1681432312016 - Ciclo: 1</p></div>
+                <p class="rendimento">Rendimento no Curso:</p>
+                <ul class="rendimento-info">
+                    <li>PP: 0.00%</li>
+                    <li>PR: 0.00</li>
+                    <li>MAIOR PR: 0.00</li>
+                </ul>
+                <p class="prazo">Prazo de Integralização:</p>
+                <ul class="prazo-info">
+                    <li>Cursado: 1</li>
+                    <li>Máximo: 3</li>
+                    <li>Faltam: 2</li>
+                </ul>
+                <p class="email">Email Institucional:</p>
+                <p class="email-info">FATEC - Leonardo.mucci@fatec.sp.gov.br</p>
+            
+        </div>
+
+
+
+        <div class="container-lg"><b>Horário</b></div>
+
+        <div class="homi">
+
+            <table>
+
+                <tr>
+                <th>SEG</th>
+                <th>Turma</th>
+                <th>Sigla</th>
+                <th>Disciplina</th>
+                <th>Professor</th>
+                
+            </tr>
+                <tr>
+                  <td style="background-color: var(--sidebar-color);">14:40</td>
+                    <td>ADS AMS 4</td>
+                    <td>IES020</td>
+                    <td>Engenharia de software</td>
+                    <td>Leide</td>
+
+                </tr>
+
+                <tr>
+                    <td style="background-color: var(--sidebar-color);">16:40</td>
+                      <td>ADS AMS 4</td>
+                      <td>IES020</td>
+                      <td>Engenharia de software</td>
+                      <td>Leide</td>
+  
+                  </tr>
+
+                  <tr>
+                    <td style="background-color: var(--sidebar-color);">16:50</td>
+                      <td>ADS AMS 4</td>
+                      <td>IES020</td>
+                      <td>Engenharia de software</td>
+                      <td>Leide</td>
+  
+                  </tr>
+
+                  <tr>
+                    <td style="background-color: var(--sidebar-color);">18:20</td>
+                      <td>ADS AMS 4</td>
+                      <td>IES020</td>
+                      <td>Engenharia de software</td>
+                      <td>Leide</td>
+  
+                  </tr>
+
+            <table>
+
+                <tr>
+                <th>TER</th>
+                <th>Turma</th>
+                <th>Sigla</th>
+                <th>Disciplina</th>
+                <th>Professor</th>
+                
+            </tr>
+                <tr>
+                  <td style="background-color: var(--sidebar-color);" style="background-color: var(--sidebar-color);">14:40</td>
+                    <td>ADS AMS 4</td>
+                    <td>IED008</td>
+                    <td>Estrutura de software</td>
+                    <td>Verrisimo</td>
+
+                </tr>
+
+                <tr>
+                    <td style="background-color: var(--sidebar-color);">16:40</td>
+                      <td>ADS AMS 4</td>
+                      <td>IED008</td>
+                      <td>Estrutura de software</td>
+                      <td>Verrisimo</td>
+  
+                  </tr>
+
+                  <tr>
+                    <td style="background-color: var(--sidebar-color);">16:50</td>
+                      <td>ADS AMS 4</td>
+                      <td>IED008</td>
+                      <td>Estrutura de software</td>
+                      <td>Verrisimo</td>
+  
+                  </tr>
+
+                  <tr>
+                    <td style="background-color: var(--sidebar-color);">18:20</td>
+                      <td>ADS AMS 4</td>
+                      <td>IED008</td>
+                      <td>Estrutura de software</td>
+                      <td>Verrisimo</td>
+  
+                  </tr>
+
+
+
+
+                  <table>
+
+                    <tr>
+                    <th>QUA</th>
+                    <th>Turma</th>
+                    <th>Sigla</th>
+                    <th>Disciplina</th>
+                    <th>Professor</th>
+                    
+                </tr>
+                    <tr>
+                      <td style="background-color: var(--sidebar-color);">14:40</td>
+                        <td>ADS AMS 4</td>
+                        <td>IHC008</td>
+                        <td>Interação Humano Computador</td>
+                        <td>Patricia</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td style="background-color: var(--sidebar-color);">16:40</td>
+                          <td>ADS AMS 4</td>
+                          <td>IHC008</td>
+                          <td>Interação Humano Computador</td>
+                          <td>Patricia</td>
+      
+                      </tr>
+    
+                      <tr>
+                        <td style="background-color: var(--sidebar-color);">16:50</td>
+                          <td>ADS AMS 4</td>
+                          <td>ILP063</td>
+                          <td>Técnicas Avançadas de Programação</td>
+                          <td>Fernando</td>
+      
+                      </tr>
+    
+                      <tr>
+                        <td style="background-color: var(--sidebar-color);">18:20</td>
+                          <td>ADS AMS 4</td>
+                          <td>ILP063</td>
+                          <td>Técnicas Avançadas de Programação</td>
+                          <td>Fernando</td>
+      
+                      </tr>
+
+                      <tr>
+                        <td style="background-color: var(--sidebar-color);">18:30</td>
+                          <td>ADS AMS 4</td>
+                          <td>IAL021</td>
+                          <td>Projeto Integrador I</td>
+                          <td>Fernando</td>
+      
+                      </tr>
+
+                      <tr>
+                        <td style="background-color: var(--sidebar-color);">21:30</td>
+                          <td>ADS AMS 4</td>
+                          <td>IAL021</td>
+                          <td>Projeto Integrador I</td>
+                          <td>Fernando</td>
+      
+                      </tr>
+
+
+
+                      <table>
+
+                        <tr>
+                        <th>QUI</th>
+                        <th>Turma</th>
+                        <th>Sigla</th>
+                        <th>Disciplina</th>
+                        <th>Professor</th>
+                        
+                    </tr>
+                        <tr>
+                          <td style="background-color: var(--sidebar-color);">14:40</td>
+                            <td>ADS AMS 4</td>
+                            <td>MAT028</td>
+                            <td>Matemática Discreta</td>
+                            <td>Lilian</td>
+        
+                        </tr>
+        
+                        <tr>
+                            <td style="background-color: var(--sidebar-color);">16:40</td>
+                              <td>ADS AMS 4</td>
+                              <td>MAT028</td>
+                              <td>Matemática Discreta</td>
+                              <td>Lilian</td>
+          
+                          </tr>
+        
+                          <tr>
+                            <td style="background-color: var(--sidebar-color);">16:50</td>
+                              <td>ADS AMS 4</td>
+                              <td>IBD034</td>
+                              <td>Técnicas Avançadas de Banco de Dados Relacional e Não Relacional</td>
+                              <td>???</td>
+          
+                          </tr>
+        
+                          <tr>
+                            <td style="background-color: var(--sidebar-color);">18:20</td>
+                              <td>ADS AMS 4</td>
+                              <td>IBD034</td>
+                              <td>Técnicas Avançadas de Banco de Dados Relacional e Não Relacional</td>
+                              <td>???</td>
+          
+                          </tr>
+
+                          <table>
+
+                            <tr>
+                            <th>SEX</th>
+                            <th>Turma</th>
+                            <th>Sigla</th>
+                            <th>Disciplina</th>
+                            <th>Professor</th>
+                            
+                        </tr>
+                            <tr>
+                              <td style="background-color: var(--sidebar-color);">14:40</td>
+                                <td>ADS AMS 4</td>
+                                <td>ILP065</td>
+                                <td>Técnicas Avançadas de Programação Web e Mobile</td>
+                                <td>Ronny</td>
+            
+                            </tr>
+            
+                            <tr>
+                                <td style="background-color: var(--sidebar-color);">16:40</td>
+                                  <td>ADS AMS 4</td>
+                                  <td>ILP065</td>
+                                  <td>Técnicas Avançadas de Programação Web e Mobile</td>
+                                  <td>Ronny</td>
+              
+                              </tr>
+            
+                              <tr style="color: green;">
+                                <td style="background-color: var(--sidebar-color); color: white;">16:50</td>
+                                  <td>ADS AMS 4</td>
+                                  <td>LIN041</td>
+                                  <td>Língua Inglesa I</td>
+                                  <td>Miguel</td>
+              
+                              </tr>
+            
+                              <tr style="color: green;">
+                                <td style="background-color: var(--sidebar-color); color: white;">18:20</td>
+                                  <td>ADS AMS 4</td>
+                                  <td>LIN041</td>
+                                  <td>Língua Inglesa I</td>
+                                  <td>Miguel</td>
+              
+                              </tr>
+
+
+
+
+        </div>
+
+       
+        
+
+ 
+
+
+        
+
+
+
+
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            searchBtn = body.querySelector(".search-box"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
+
+
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        })
+
+        function toggleTheme() {
+            const body = document.querySelector('body');
+            const modeText = document.querySelector('.mode-text');
+
+            // Verifique se o modo atual é escuro
+            const isDarkMode = body.classList.contains('dark');
+
+            // Alterne o modo
+            if (isDarkMode) {
+                body.classList.remove('dark');
+                modeText.innerText = 'Dark mode';
+            } else {
+                body.classList.add('dark');
+                modeText.innerText = 'Light mode';
+            }
+        }
+
+        // Adicione um ouvinte de evento ao botão de alternância de tema, se necessário
+        const themeToggleButton = document.querySelector('.theme-toggle-button');
+
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', toggleTheme);
+        }
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "Light mode";
+            } else {
+                modeText.innerText = "Dark mode";
+
+            }
+        });
+
+        
+        document.addEventListener('DOMContentLoaded', function () {
+    var userLink = document.querySelector('.user-link');
+    var userPopup = document.querySelector('.user-popup');
+    var sidebar = document.querySelector('.sidebar');
+
+    userLink.addEventListener('mouseenter', function () {
+        userPopup.style.display = 'block';
+    });
+
+    userLink.addEventListener('mouseleave', function () {
+        userPopup.style.display = 'none';
+    });
+
+    sidebar.addEventListener('click', function () {
+        userPopup.classList.toggle('active-sidebar');
+    });
+});
+
+
+    </script>
+
+</body>
+
+</html>
